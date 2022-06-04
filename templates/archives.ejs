@@ -1,40 +1,40 @@
 <html lang="en">
-    <head>
-        <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
-        <meta name="description" content="<%- themeConfig.siteDescription %>" />
-    </head>
-    <body>
-        <div class="antialiased flex flex-col min-h-screen" id="app">
-            <%- include('./includes/header') %>
+  <head>
+    <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+    <meta name="description" content="<%- themeConfig.siteDescription %>" />
+  </head>
+  <body>
+    <div class="antialiased flex flex-col min-h-screen" id="app">
+      <%- include('./includes/header') %>
 
-            <div class="max-w-4xl w-full mx-auto pt-32">
-                <div
-                    class="py-8 shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0"
-                >
-                    <% posts.forEach((post) => { %>
-                    <div class="px-8 pb-5 flex relative overflow-hidden">
-                        <% if (post.isTop) { %>
-                        <i
-                            class="ri-star-line text-orange-200 absolute left-0 ml-2 rotate-90"
-                        ></i>
-                        <% } %>
-                        <div class="flex-1">
-                            <a
-                                href="<%= post.link %>"
-                                class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100"
-                            >
-                                <%= post.title %>
-                            </a>
-                        </div>
-                    </div>
-                    <% }); %>
-                </div>
-
-                <%- include('./includes/pagination') %> <%-
-                include('./includes/footer') %>
+      <div class="max-w-4xl w-full mx-auto pt-32">
+        <div
+          class="py-8 shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0"
+        >
+          <% posts.forEach((post) => { %>
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            <% if (post.isTop) { %>
+            <i
+              class="ri-star-line text-orange-200 absolute left-0 ml-2 rotate-90"
+            ></i>
+            <% } %>
+            <div class="flex-1">
+              <a
+                href="<%= post.link %>"
+                class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100"
+              >
+                <%= post.title %>
+              </a>
             </div>
+          </div>
+          <% }); %>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="<%= site.themeConfig.domain %>/media/scripts/main.js"></script>
-    </body>
+
+        <%- include('./includes/pagination') %> <%- include('./includes/footer')
+        %>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="<%= site.themeConfig.domain %>/media/scripts/main.js"></script>
+  </body>
 </html>
