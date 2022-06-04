@@ -1,0 +1,126 @@
+@import url("https://rsms.me/inter/inter.css");
+
+body {
+    font-family: "Sarasa Mono Slab CL", Inter, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    color: #333;
+    background-color: rgb(250, 249, 247);
+}
+
+@supports (font-variation-settings: normal) {
+    body {
+        font-family: "Sarasa Mono Slab CL", "Inter var", Inter, Rubik,
+            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+            Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+}
+
+@font-face {
+    font-family: "Sarasa Mono Slab CL";
+    src: url("../media/font/smsc.eot");
+    src: url("../media/font/smsc.eot?iefix") format("embedded-opentype"),
+        url("../media/font/smsc.woff2") format("woff2"),
+        url("../media/font/smsc.woff") format("woff"),
+        url("../media/font/smsc.ttf") format("truetype"),
+        url("../media/font/smsc.svg#Sarasa Mono Slab CL") format("svg");
+}
+
+a:not([class]) {
+    border-bottom-style: solid;
+    border-bottom-width: 0.2rem;
+    color: rgb(15, 97, 255);
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    border-color: rgba(15, 97, 255, 0.1);
+    &:hover {
+        border-color: rgba(15, 97, 255, 0.5);
+    }
+    @media (prefers-color-scheme: dark) {
+        color: #81a5f8;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #333;
+        color: #999;
+    }
+}
+
+.yellow-btn {
+    box-shadow: rgba(255, 214, 2, 0.6) 0px 6px 12px 0px;
+    &:hover {
+        box-shadow: rgba(255, 214, 2, 0.6) 0px 2px 4px 0px;
+    }
+    @media (prefers-color-scheme: dark) {
+        box-shadow: none;
+    }
+}
+
+.wechat {
+    img {
+        display: none;
+    }
+    &:hover {
+        img {
+            display: inline-block;
+        }
+    }
+}
+
+@time: 5s; // set animation time here
+
+.s3-round {
+    border-radius: 100px;
+} // .s3-round
+.s3-hover {
+    &:hover {
+        .s3-transition;
+        //-webkit-animation: s3-rotate @time infinite linear;
+        animation: s3-rotate @time infinite linear, s3-opacity @time infinite;
+    } // &:hover
+} // .s3-hover
+
+.s3-transition {
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+@-webkit-keyframes s3-rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+@keyframes s3-opacity {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.s3-dotted {
+    .s3-round;
+    .s3-hover;
+} // .s3-dotted close
+
+.s3-dashed {
+    .s3-round;
+    .s3-hover;
+} // .s3-dashed close

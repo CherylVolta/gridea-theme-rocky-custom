@@ -1,0 +1,40 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title><%= siteTitle %></title>
+<link rel="shortcut icon" href="<%= themeConfig.domain %>/favicon.ico" />
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"
+/>
+<link
+    rel="stylesheet"
+    href="<%= site.themeConfig.domain %>/media/css/tailwind.css"
+/>
+<link rel="stylesheet" href="<%= site.themeConfig.domain %>/styles/main.css" />
+<link
+    rel="alternate"
+    type="application/atom+xml"
+    title="<%= siteTitle %> - Atom Feed"
+    href="<%= themeConfig.domain %>/atom.xml"
+/>
+
+<% if (site.customConfig.ga) { %>
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "<%= site.customConfig.ga %>");
+</script>
+<% } %>

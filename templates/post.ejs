@@ -1,0 +1,266 @@
+<html lang="en">
+    <head>
+        <%- include('./includes/head', { siteTitle: `${post.title} -
+        ${themeConfig.siteName}` }) %>
+        <meta name="description" content="<%= post.description %>" />
+        <meta
+            property="og:title"
+            content="<%= `${post.title} - ${themeConfig.siteName}` %>"
+        />
+        <meta property="og:description" content="<%= post.description %>" />
+        <meta property="og:type" content="articles" />
+        <meta property="og:url" content="<%= post.link %>" />
+        <meta
+            property="og:image"
+            content="<%= `${themeConfig.showFeatureImage && post.feature || themeConfig.domain + '/images/avatar.png'}` %>"
+        />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="1200" />
+        <meta
+            name="twitter:title"
+            content="<%= `${post.title} - ${themeConfig.siteName}` %>"
+        />
+        <meta name="twitter:description" content="<%= post.description %>" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="<%= post.link %>" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"
+        />
+
+        <% if (site.customConfig.codeHighlight) { %>
+        <link
+            rel="stylesheet"
+            href="<%= site.themeConfig.domain %>/media/css/prism<%= `-${site.customConfig.hightlightTheme || 'atom-dark'}` %>.css"
+        />
+        <% } %> <% if (site.customConfig.katexRender) { %>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css"
+        />
+        <% } %>
+    </head>
+
+    <body>
+        <div class="antialiased flex flex-col min-h-screen" id="app">
+            <a
+                href="<%= site.themeConfig.domain %>"
+                class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft"
+            >
+                <%= themeConfig.siteName %>
+            </a>
+            <div class="max-w-4xl w-full mx-auto">
+                <div
+                    class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8"
+                >
+                    <h1
+                        class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700"
+                    >
+                        <%= post.title %>
+                    </h1>
+                    <% if (themeConfig.showFeatureImage && post.feature) { %>
+                    <img
+                        src="<%= post.feature %>"
+                        alt="<%= post.title %>"
+                        class="block w-full mb-8"
+                    />
+                    <% } %>
+                    <div class="mb-8 flex flex-wrap">
+                        <div class="text-gray-400 text-sm mr-4">
+                            <%= post.dateFormat %> · <%= post.stats.text %>
+                        </div>
+                        <% post.tags.forEach(function(tag) { %>
+                        <a
+                            href="<%= tag.link %>"
+                            class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2"
+                        >
+                            <i class="ri-hashtag"></i>
+                            <%= tag.name %>
+                        </a>
+                        <% }); %>
+                    </div>
+                    <div class="markdown mb-8" v-pre><%- post.content %></div>
+                    <!-- Share to Twitter, Weibo, Telegram -->
+                    <div class="flex items-center">
+                        <div class="mr-4 flex items-center">
+                            <i class="ri-share-forward-line text-gray-500"></i>
+                        </div>
+                        <div
+                            class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex"
+                            @click="shareToTwitter"
+                        >
+                            <i class="ri-twitter-line"></i>
+                        </div>
+                        <div
+                            class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex"
+                            @click="shareToWeibo"
+                        >
+                            <i class="ri-weibo-line"></i>
+                        </div>
+                        <div
+                            class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex"
+                            @click="shareToTelegram"
+                        >
+                            <i class="ri-telegram-line"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <% if (typeof commentSetting !== 'undefined' &&
+                commentSetting.showComment) { %> <% if
+                (commentSetting.commentPlatform === 'gitalk') { %>
+                <div id="gitalk-container"></div>
+                <% } %> <% if (commentSetting.commentPlatform === 'disqus') { %>
+                <%- include('./includes/disqus') %> <% } %> <% } %> <% if
+                (site.customConfig.openValine) { %>
+                <div id="vlaine-comment"></div>
+                <% } %> <%- include('./includes/footer') %>
+            </div>
+
+            <!-- TOC Container -->
+            <div
+                class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight"
+                @click="showToc = true"
+            >
+                <i class="ri-file-list-line"></i>
+            </div>
+
+            <div
+                class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast"
+                :class="{ '-mr-64': !showToc }"
+            >
+                <div class="flex mb-4 justify-end">
+                    <div
+                        class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast"
+                        @click="showToc = false"
+                    >
+                        <i class="ri-close-line text-lg"></i>
+                    </div>
+                </div>
+                <div class="post-toc-container"><%- post.toc %></div>
+            </div>
+
+            <!-- Back to top -->
+            <div
+                class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200"
+                @click="backToUp"
+                v-show="scrolled"
+            >
+                <i class="ri-arrow-up-line"></i>
+            </div>
+        </div>
+
+        <%- include('./includes/photoswipe') %>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="<%= site.themeConfig.domain %>/media/scripts/main.js"></script>
+
+        <!-- Code Highlight -->
+        <% if (site.customConfig.codeHighlight) { %>
+        <script src="<%= site.themeConfig.domain %>/media/prism.js"></script>
+        <script>
+            Prism.highlightAll();
+        </script>
+        <% } %>
+
+        <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+        <script>
+            //拿到预览框架，也就是上面的html代码
+            var pswpElement = document.querySelectorAll(".pswp")[0];
+            //定义图片数组变量
+            var imgitems;
+            /**
+             * 用于显示预览界面
+             * @param index 图片数组下标
+             */
+            function viewImg(index) {
+                //其它选项这里不做过多阐述，详情见官网
+                var pswpoptions = {
+                    index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+                    bgOpacity: 0.7, // 背景透明度，0-1
+                    maxSpreadZoom: 3, // 缩放级别，不要太大
+                };
+                //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+                var gallery = new PhotoSwipe(
+                    pswpElement,
+                    PhotoSwipeUI_Default,
+                    imgitems,
+                    pswpoptions
+                );
+                gallery.init();
+            }
+            /**
+             * 用于添加图片点击事件
+             * @param img 图片元素
+             * @param index 所属下标（在imgitems中的位置）
+             */
+            function addImgClick(img, index) {
+                img.onclick = function () {
+                    viewImg(index);
+                };
+            }
+            /**
+             * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+             * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+             * 异步加载图片可在图片元素创建完成后调用此方法
+             */
+            function initImg() {
+                //重置图片数组
+                imgitems = [];
+                //查找class:markdown 下的所有img元素并遍历
+                var imgs = document.querySelectorAll(".markdown img");
+                for (var i = 0; i < imgs.length; i++) {
+                    var img = imgs[i];
+                    //本站相册初始为loading图片，真实图片放在data-src
+                    var ds = img.getAttribute("data-src");
+                    //创建image对象，用于获取图片宽高
+                    var imgtemp = new Image();
+                    //判断是否存在data-src
+                    if (ds != null && ds.length > 0) {
+                        imgtemp.src = ds;
+                    } else {
+                        imgtemp.src = img.src;
+                    }
+                    //判断是否存在缓存
+                    if (imgtemp.complete) {
+                        var imgobj = {
+                            src: imgtemp.src,
+                            w: imgtemp.width,
+                            h: imgtemp.height,
+                        };
+                        imgitems[i] = imgobj;
+                        addImgClick(img, i);
+                    } else {
+                        console.log("进来了2");
+                        imgtemp.index = i;
+                        imgtemp.img = img;
+                        imgtemp.onload = function () {
+                            var imgobj = {
+                                src: this.src,
+                                w: this.width,
+                                h: this.height,
+                            };
+                            //不要使用push，因为onload前后顺序会不同
+                            imgitems[this.index] = imgobj;
+                            //添加点击事件
+                            addImgClick(this.img, this.index);
+                        };
+                    }
+                }
+            }
+            //初始化
+            initImg();
+        </script>
+        <% if (site.customConfig.openValine) { %> <%-
+        include('./includes/valine') %> <% } %> <% if (typeof commentSetting !==
+        'undefined' && commentSetting.showComment) { %> <% if
+        (commentSetting.commentPlatform === 'gitalk') { %> <%-
+        include('./includes/gitalk') %> <% } %> <% } %>
+    </body>
+</html>
