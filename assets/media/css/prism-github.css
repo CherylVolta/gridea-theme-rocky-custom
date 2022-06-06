@@ -6,7 +6,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
   color: #393a34;
-  font-family: "Sarasa Mono Slab CL", monospace; /* "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier */
+  font-family: "Fira Code", monospace; /* "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier */
   direction: ltr;
   text-align: left;
   white-space: pre;
