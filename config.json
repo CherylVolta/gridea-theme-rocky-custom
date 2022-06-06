@@ -41,12 +41,12 @@
       "name": "fontFamily",
       "label": "网页字体",
       "group": "特色功能",
-      "value": "Sarasa Mono Slab CL",
+      "value": "霞骛文楷等宽",
       "type": "radio",
       "options": [
         {
-          "label": "Sarasa Mono Slab CL（默认）",
-          "value": "Sarasa Mono Slab CL"
+          "label": "霞骛文楷等宽（默认）",
+          "value": "霞骛文楷等宽"
         }
       ]
     },
