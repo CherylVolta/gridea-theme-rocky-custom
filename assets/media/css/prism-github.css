@@ -6,12 +6,11 @@
 code[class*="language-"],
 pre[class*="language-"] {
   color: #393a34;
-  font-family: "Fira Code", monospace;
-  /*
-  "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier
-  */
+  font-family: "Fira Code", "霞骛文楷等宽"; /* "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace */
+
   font-feature-settings: "calt" 1; /* Enable ligatures for IE 10+, Edge */
   text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
+
   direction: ltr;
   text-align: left;
   white-space: pre;

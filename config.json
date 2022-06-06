@@ -1,6 +1,6 @@
 {
   "name": "Rocky Custom",
-  "version": "1.0.9.103",
+  "version": "1.0.9.200",
   "author": "Waoap & EryouHao",
   "repository": "https://github.com/Waoap/gridea-theme-rocky-custom",
   "customConfig": [
@@ -16,7 +16,7 @@
       "name": "hightlightTheme",
       "label": "代码高亮主题",
       "group": "特色功能",
-      "value": "github",
+      "value": "synthwave84",
       "type": "radio",
       "options": [
         {
