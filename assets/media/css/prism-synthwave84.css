@@ -10,7 +10,12 @@ pre[class*="language-"] {
   color: #f92aad;
   text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
   background: none;
-  font-family: "Fira Code", monospace; /* "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono" */
+  font-family: "Fira Code", monospace;
+  /*
+  "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono"
+  */
+  font-feature-settings: "calt" 1; /* Enable ligatures for IE 10+, Edge */
+  text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
   font-size: 1em;
   text-align: left;
   white-space: pre;
