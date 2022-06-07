@@ -18,7 +18,7 @@ Version number naming rule: **<ORIGINAL_THEME_VERSION_NUMBER>.<THIS_THEME_VERSIO
 
 3. Restart Gridea client to switch to this theme (named **Rocky Custom**).
 
-## Changes compared to the original theme (v1.0.9.200)
+## Changes compared to the original theme (This version: v1.0.9.200, Original version: v1.0.9)
 
 ### Bugs fixed
 
