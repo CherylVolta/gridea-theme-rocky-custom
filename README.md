@@ -1,42 +1,42 @@
-# gridea-theme-rocky-custom
+# Gridea Theme Rocky Custom
 
-Gridea 静态博客主题 Rocky 的 **自用版本**
+Self-use version of web page theme Rocky for static blogger Gridea.
 
-## 说明
+## Description
 
-这是 Gridea 静态博客主题 Rocky 的自用版本，仅供学习交流！
+This is a self-use version of web page theme Rocky for static blogger Gridea customized by Waoap, it's only for learning and communicating.
 
-版本号命名规则为：**<原主题版本号>.<本主题版本号>**
+Version number naming rule: **<ORIGINAL_THEME_VERSION_NUMBER>.<THIS_THEME_VERSION_NUMBER>**
 
-## 使用
+## Usage
 
-1. 选择一个 **Release** 版本，下载 **Source Code**
+1. Download [the source code of latest release file](https://github.com/Waoap/gridea-theme-rocky-custom/releases).
 
-2. **带文件夹解压** 并放入 Gridea 工程目录下的 **themes** 目录中
+2. **Extract with folder** and put it into the **themes** folder under the project folder of Gridea.
 
-3. 重启 Gridea 客户端即可切换到本主题（名为 **Rocky Custom** ）
+3. Restart Gridea client to switch to this theme (named **Rocky Custom**).
 
-## 较原主题的变更之处（v1.0.9.200）
+## Changes compared to the original theme (v1.0.9.200)
 
-### Bug 修复
+### Bugs fixed
 
-1. 修复代码高亮主题 Synthwave84 在特定情况时的背景颜色错误
+1. Fixed the error that the background color of code highlight theme Synthwave84 is wrong in some special situations.
 
-### 功能修改
+### Function changes
 
-1. 删除一些前景、背景颜色不适配的代码高亮主题，现有 **Github、Synthwave84（默认）** 两种高亮主题
+1. Delete some code highlight themes with inappropriate foreground and background colors, now, there are two code highlight themes **Github, Synthwave84 (default)** .
 
-2. 增删字体，现有 **霞骛文楷等宽、Fira Code** 两种字体
+2. Add and Delete fonts, now, there are two fonts **[霞骛文楷等宽](https://github.com/lxgw/LxgwWenKai/), [Fira Code](https://github.com/tonsky/FiraCode)**.
 
-   注意，其中：
+   Attention:
 
-   - 网页字体（可自主选择）有：霞骛文楷等宽（默认）[中英文]
+   - Web page fonts (Can choose independently) : 霞骛文楷等宽 (Default) [Chinese, English].
 
-   - 代码块字体为：Fira Code [英文] + 霞骛文楷等宽 [中文]
+   - Code bloc fonts: Fira Code [English] + 霞骛文楷等宽 [Chinese].
 
-3. 调整一些设置的默认开关状态
+3. Change the default state of some settings.
 
-4. 通过在 index.ejs 中添加如下代码
+4. By adding these code below:
 
    ```html
    <meta
@@ -45,8 +45,8 @@ Gridea 静态博客主题 Rocky 的 **自用版本**
    />
    ```
 
-   实现强制网页启用 https
+   Implement mandatory enable of https.
 
 ### TODO
 
-- [ ] 尝试优化外部 css 的加载速度、字体加载速度等，以加快网页加载
+- [ ] Try to optimize the loading speed of external css and fonts, etc., in order to speed up the loading of web page.
