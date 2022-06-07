@@ -34,7 +34,7 @@ Version number naming rule: **<ORIGINAL_THEME_VERSION_NUMBER>.<THIS_THEME_VERSIO
 
    - Web page fonts (Can choose independently) : 霞骛文楷等宽 (Default) [Chinese, English].
 
-   - Code bloc fonts: Fira Code [English] + 霞骛文楷等宽 [Chinese].
+   - Code block fonts: Fira Code [English] + 霞骛文楷等宽 [Chinese].
 
 3. Change the default state of some settings.
 
