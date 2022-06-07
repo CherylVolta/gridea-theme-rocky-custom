@@ -2,6 +2,8 @@
 
 Self-use version of web page theme Rocky for static blogger Gridea.
 
+[中文说明](README_ZH.md)
+
 ## Description
 
 This is a self-use version of web page theme Rocky for static blogger Gridea customized by Waoap, it's only for learning and communicating.
