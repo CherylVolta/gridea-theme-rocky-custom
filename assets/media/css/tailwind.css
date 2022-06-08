@@ -162,6 +162,7 @@ ul {
 html {
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
+  font-size: large;
 }
 *,
 ::after,
