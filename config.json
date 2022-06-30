@@ -41,12 +41,12 @@
       "name": "fontFamily",
       "label": "网页字体",
       "group": "特色功能",
-      "value": "霞骛文楷等宽",
+      "value": "霞骛文楷",
       "type": "radio",
       "options": [
         {
-          "label": "霞骛文楷等宽（默认）",
-          "value": "霞骛文楷等宽"
+          "label": "霞骛文楷（默认）",
+          "value": "霞骛文楷"
         }
       ]
     },

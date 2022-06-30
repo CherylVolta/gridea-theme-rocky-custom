@@ -26,13 +26,13 @@
 
 1. 删除一些前景、背景颜色不适配的代码高亮主题，现有 **Github 、Synthwave84（默认）** 两种高亮主题。
 
-2. 增删字体，现有 **[霞骛文楷等宽](https://github.com/lxgw/LxgwWenKai/)、[Fira Code](https://github.com/tonsky/FiraCode)** 两种字体。
+2. 增删字体，现有 **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite)、[Fira Code](https://github.com/tonsky/FiraCode)** 两种字体。
 
    注意，其中：
 
-   - 网页字体（可自主选择）：霞骛文楷等宽（默认）[中文，英文]。
+   - 网页字体（可自主选择）：霞骛文楷（默认）[中文，英文]。
 
-   - 代码块字体：Fira Code [英文] + 霞骛文楷等宽 [中文]。
+   - 代码块字体：Fira Code [英文] + 霞骛文楷 [中文]。
 
 3. 调整一些设置的默认开关状态。
 
