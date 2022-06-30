@@ -28,7 +28,7 @@ Version number naming rule: **<ORIGINAL_THEME_VERSION_NUMBER>.<THIS_THEME_VERSIO
 
 1. Delete some code highlight themes with inappropriate foreground and background colors, now, there are two code highlight themes **Github, Synthwave84 (default)** .
 
-2. Add and Delete fonts, now, there are two fonts **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite), [Fira Code](https://github.com/tonsky/FiraCode)**.
+2. Add and Delete fonts, now, there are two fonts **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite), [Fira Code](https://github.com/tonsky/FiraCode)**. The font file are saved in repository, and loading via CDN.
 
    Attention:
 
