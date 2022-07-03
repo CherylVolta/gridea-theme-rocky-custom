@@ -26,7 +26,7 @@
 
 1. 删除一些前景、背景颜色不适配的代码高亮主题，现有 **Github 、Synthwave84（默认）** 两种高亮主题。
 
-2. 增删字体，现有 **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite)、[Fira Code](https://github.com/tonsky/FiraCode)** 两种字体。字体文件保存在仓库中，通过 CDN 来加载。
+2. 增删字体，现有 **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite)、[Fira Code](https://github.com/tonsky/FiraCode)** 两种字体。字体文件保存在仓库中，通过 **[fastly jsDelivr](https://fastly.jsdelivr.net)** 来加载。
 
    注意，其中：
 
