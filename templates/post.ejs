@@ -26,11 +26,11 @@
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"
+      href="https://fastly.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"
+      href="https://fastly.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"
     />
 
     <% if (site.customConfig.codeHighlight) { %>
@@ -157,7 +157,7 @@
 
     <%- include('./includes/photoswipe') %>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="<%= site.themeConfig.domain %>/media/scripts/main.js"></script>
 
     <!-- Code Highlight -->
@@ -168,8 +168,8 @@
     </script>
     <% } %>
 
-    <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
     <script>
       //拿到预览框架，也就是上面的html代码
       var pswpElement = document.querySelectorAll(".pswp")[0];
