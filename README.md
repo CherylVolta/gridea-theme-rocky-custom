@@ -49,6 +49,6 @@ Version number naming rule: **<ORIGINAL_THEME_VERSION_NUMBER>.<THIS_THEME_VERSIO
 
    Implement mandatory enable of https.
 
-### TODO
+## TODO
 
 - [ ] Try to optimize the loading speed of external css and fonts, etc., in order to speed up the loading of web page.
