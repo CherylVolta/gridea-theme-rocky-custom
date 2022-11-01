@@ -1,8 +1,8 @@
 const generateOverride = (params = {}) => {
-  let result = "";
+    let result = ''
 
-  if (params.fontFamily) {
-    result += `
+    if (params.fontFamily) {
+        result += `
       body {
         font-family: "${params.fontFamily}";
       }
@@ -12,16 +12,16 @@ const generateOverride = (params = {}) => {
           font-family: "${params.fontFamily}";
         }
       }
-    `;
-  }
+    `
+    }
 
-  if (params.customCss) {
-    result += `
+    if (params.customCss) {
+        result += `
       ${params.customCss}
-    `;
-  }
+    `
+    }
 
-  return result;
-};
+    return result
+}
 
-module.exports = generateOverride;
+module.exports = generateOverride

@@ -28,25 +28,25 @@
 
 2. 增删字体，现有 **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite)、[Fira Code](https://github.com/tonsky/FiraCode)** 两种字体。字体文件保存在仓库中，通过 **[fastly jsDelivr](https://fastly.jsdelivr.net)** 来加载。
 
-   注意，其中：
+    注意，其中：
 
-   - 网页字体（可自主选择）：霞骛文楷（默认）[中文，英文]。
+    - 网页字体（可自主选择）：霞骛文楷（默认）[中文，英文]。
 
-   - 代码块字体：Fira Code [英文] + 霞骛文楷 [中文]。
+    - 代码块字体：Fira Code [英文] + 霞骛文楷 [中文]。
 
 3. 调整一些设置的默认开关状态。
 
 4. 通过在 index.ejs 中添加如下代码：
 
-   ```html
-   <meta
-     http-equiv="Content-Security-Policy"
-     content="upgrade-insecure-requests"
-   />
-   ```
+    ```html
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="upgrade-insecure-requests"
+    />
+    ```
 
-   实现强制网页启用 https 。
+    实现强制网页启用 https 。
 
 ## TODO
 
-- [ ] 尝试优化外部 css 、字体的加载速度等，以加快网页加载。
+-   [ ] 尝试优化外部 css 、字体的加载速度等，以加快网页加载。

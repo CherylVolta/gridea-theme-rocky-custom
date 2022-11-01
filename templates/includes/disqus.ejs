@@ -1,21 +1,21 @@
 <link
-  rel="stylesheet"
-  href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css"
+    rel="stylesheet"
+    href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css"
 />
 <script
-  type="application/javascript"
-  src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"
+    type="application/javascript"
+    src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"
 ></script>
 
 <div id="disqus_thread"></div>
 
 <script type="application/javascript">
-  var options = {
-    shortname: "<%= commentSetting.disqusSetting.shortname %>",
-    apikey: "<%= commentSetting.disqusSetting.apikey %>",
-  };
-  if ("<%= commentSetting.disqusSetting.api %>") {
-    options.api = "<%= commentSetting.disqusSetting.api %>";
-  }
-  var dsqjs = new DisqusJS(options);
+    var options = {
+        shortname: '<%= commentSetting.disqusSetting.shortname %>',
+        apikey: '<%= commentSetting.disqusSetting.apikey %>',
+    }
+    if ('<%= commentSetting.disqusSetting.api %>') {
+        options.api = '<%= commentSetting.disqusSetting.api %>'
+    }
+    var dsqjs = new DisqusJS(options)
 </script>
