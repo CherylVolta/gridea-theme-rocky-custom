@@ -26,7 +26,7 @@
 
 1. 删除一些前景、背景颜色不适配的代码高亮主题，现有 **Github 、Synthwave84（默认）** 两种高亮主题。
 
-2. 增删字体，现有 **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite)、[Fira Code](https://github.com/tonsky/FiraCode)** 两种字体。字体文件保存在仓库中，通过 **[fastly jsDelivr](https://fastly.jsdelivr.net)** 来加载。
+2. 增删字体，现有 **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite)、[Fira Code](https://github.com/tonsky/FiraCode)** 两种字体。字体文件保存在 **[仓库](https://github.com/Waoap/waoap.github.io/tree/main/fonts)** 中，通过 **[fastly jsDelivr](https://fastly.jsdelivr.net)** 来加载。
 
     注意，其中：
 
@@ -35,17 +35,6 @@
     - 代码块字体：Fira Code [英文] + 霞骛文楷 [中文]。
 
 3. 调整一些设置的默认开关状态。
-
-4. 通过在 index.ejs 中添加如下代码：
-
-    ```html
-    <meta
-        http-equiv="Content-Security-Policy"
-        content="upgrade-insecure-requests"
-    />
-    ```
-
-    实现强制网页启用 https 。
 
 ## TODO
 
