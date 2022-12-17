@@ -30,11 +30,11 @@ Version number naming rule: **<ORIGINAL_THEME_VERSION_NUMBER>.<THIS_THEME_VERSIO
 
 2. Add and Delete fonts, now, there are two fonts **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite), [Fira Code](https://github.com/tonsky/FiraCode)**. The font file are saved in **[repository](https://github.com/Waoap/waoap.github.io/tree/main/fonts)**, and loading via **[fastly jsDelivr](https://fastly.jsdelivr.net)**.
 
-   Attention:
+    Attention:
 
-   - Web page fonts (Can choose independently) : 霞骛文楷 (Default) [Chinese, English].
+    - Web page fonts (Can choose independently) : 霞骛文楷 (Default) [Chinese, English].
 
-   - Code block fonts: Fira Code [English] + 霞骛文楷 [Chinese].
+    - Code block fonts: Fira Code [English] + 霞骛文楷 [Chinese].
 
 3. Change the default state of some settings.
 
