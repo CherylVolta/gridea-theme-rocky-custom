@@ -1,15 +1,15 @@
 <% if (pagination.prev || pagination.next) { %>
 <div class="my-4 flex justify-between px-4 md:px-0">
-    <% if (pagination.prev) { %>
-    <a href="<%= pagination.prev %>" class="btn btn-white">
-        <i class="ri-arrow-left-line mr-4"></i>
-        <%= site.customConfig.prevPage || '上一页' %>
-    </a>
-    <% } %> <% if (pagination.next) { %>
-    <a href="<%= pagination.next %>" class="btn btn-white">
-        <%= site.customConfig.nextPage || '下一页' %>
-        <i class="ri-arrow-right-line ml-4"></i>
-    </a>
-    <% } %>
+  <% if (pagination.prev) { %>
+  <a href="<%= pagination.prev %>" class="btn btn-white">
+    <i class="ri-arrow-left-line mr-4"></i>
+    <%= site.customConfig.prevPage || '上一页' %>
+  </a>
+  <% } %> <% if (pagination.next) { %>
+  <a href="<%= pagination.next %>" class="btn btn-white">
+    <%= site.customConfig.nextPage || '下一页' %>
+    <i class="ri-arrow-right-line ml-4"></i>
+  </a>
+  <% } %>
 </div>
 <% } %>

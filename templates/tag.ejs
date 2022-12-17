@@ -1,30 +1,27 @@
 <html lang="en">
-    <head>
-        <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
-        <meta name="description" content="<%- themeConfig.siteDescription %>" />
-    </head>
-    <body>
-        <div class="antialiased flex flex-col min-h-screen" id="app">
-            <%- include('./includes/header') %>
+  <head>
+    <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+    <meta name="description" content="<%- themeConfig.siteDescription %>" />
+  </head>
+  <body>
+    <div class="antialiased flex flex-col min-h-screen" id="app">
+      <%- include('./includes/header') %>
 
-            <div class="max-w-4xl w-full mx-auto pt-32">
-                <h1
-                    class="text-2xl font-bold pb-8 flex justify-center items-center"
-                >
-                    <i class="ri-hashtag"></i>
-                    <%= tag.name %>
-                </h1>
-                <div
-                    class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0"
-                >
-                    <%- include('./includes/post-list') %>
-                </div>
-
-                <%- include('./includes/pagination') %> <%-
-                include('./includes/footer') %>
-            </div>
+      <div class="max-w-4xl w-full mx-auto pt-32">
+        <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
+          <i class="ri-hashtag"></i>
+          <%= tag.name %>
+        </h1>
+        <div
+          class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+          <%- include('./includes/post-list') %>
         </div>
-        <script src="https://fastly.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="<%= site.themeConfig.domain %>/media/scripts/main.js"></script>
-    </body>
+
+        <%- include('./includes/pagination') %> <%- include('./includes/footer')
+        %>
+      </div>
+    </div>
+    <script src="https://fastly.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="<%= site.themeConfig.domain %>/media/scripts/main.js"></script>
+  </body>
 </html>

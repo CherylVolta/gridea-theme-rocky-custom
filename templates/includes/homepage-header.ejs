@@ -1,64 +1,56 @@
 <header
-    class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn"
->
-    <div class="flex-1 order-2 md:order-1 md:pr-16">
-        <div class="text-4xl font-bold text-center md:text-left">
-            <%= themeConfig.siteName %>
-        </div>
-        <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
-            <%- themeConfig.siteDescription %>
-        </div>
-        <% if (site.customConfig.showHomeBtn) { %>
-        <div class="mt-8 text-center md:text-left">
-            <a
-                href="<%= site.customConfig.homeBtnLink %>"
-                arget="_blank"
-                class="text-sm bg-yellow-50 dark:bg-indigo-500 dark:text-gray-700 font-semibold px-4 py-2 inline-block yellow-btn transition-fast rounded"
-                ><%= site.customConfig.homeBtnText %></a
-            >
-        </div>
-        <% } %> <% if (site.customConfig.showSocial) { %>
-        <div class="mt-8 flex items-center">
-            <% if (site.customConfig.socialText) { %>
-            <div class="text-gray-500 mr-2">
-                <%= site.customConfig.socialText %>
-            </div>
-            <% } %> <% ['wechat', 'mail', 'github', 'twitter', 'weibo', 'zhihu',
-            'facebook', 'telegram', 'dribbble', 'instagram', 'behance',
-            'qq'].forEach((item) => { %> <% if (site.customConfig[item]) { %> <%
-            if (site.customConfig[item] && item === 'wechat') { %>
-            <div
-                class="relative mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 transition-fast dark:hover:bg-gray-600 wechat"
-            >
-                <i class="ri-wechat-line"></i>
-                <img
-                    src="<%= `${site.customConfig[item]}` %>"
-                    alt=""
-                    class="absolute left-0 w-32"
-                    style="max-width: initial; top: 100%"
-                />
-            </div>
-            <% } else { %>
-            <a
-                href="<%= site.customConfig[item] %>"
-                target="_blank"
-                class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast"
-            >
-                <i class="ri-<%= item %>-line"></i>
-            </a>
-            <% } %> <% } %> <% }) %>
-        </div>
-        <% } %>
+  class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
+  <div class="flex-1 order-2 md:order-1 md:pr-16">
+    <div class="text-4xl font-bold text-center md:text-left">
+      <%= themeConfig.siteName %>
     </div>
-    <div
-        class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted"
-    >
+    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
+      <%- themeConfig.siteDescription %>
+    </div>
+    <% if (site.customConfig.showHomeBtn) { %>
+    <div class="mt-8 text-center md:text-left">
+      <a
+        href="<%= site.customConfig.homeBtnLink %>"
+        arget="_blank"
+        class="text-sm bg-yellow-50 dark:bg-indigo-500 dark:text-gray-700 font-semibold px-4 py-2 inline-block yellow-btn transition-fast rounded"
+        ><%= site.customConfig.homeBtnText %></a
+      >
+    </div>
+    <% } %> <% if (site.customConfig.showSocial) { %>
+    <div class="mt-8 flex items-center">
+      <% if (site.customConfig.socialText) { %>
+      <div class="text-gray-500 mr-2"><%= site.customConfig.socialText %></div>
+      <% } %> <% ['wechat', 'mail', 'github', 'twitter', 'weibo', 'zhihu',
+      'facebook', 'telegram', 'dribbble', 'instagram', 'behance',
+      'qq'].forEach((item) => { %> <% if (site.customConfig[item]) { %> <% if
+      (site.customConfig[item] && item === 'wechat') { %>
+      <div
+        class="relative mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 transition-fast dark:hover:bg-gray-600 wechat">
+        <i class="ri-wechat-line"></i>
         <img
-            class="rounded-full object-cover"
-            src="<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>"
-            alt="<%= themeConfig.siteName %>"
-            width="100%"
-            height="100%"
-        />
+          src="<%= `${site.customConfig[item]}` %>"
+          alt=""
+          class="absolute left-0 w-32"
+          style="max-width: initial; top: 100%" />
+      </div>
+      <% } else { %>
+      <a
+        href="<%= site.customConfig[item] %>"
+        target="_blank"
+        class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+        <i class="ri-<%= item %>-line"></i>
+      </a>
+      <% } %> <% } %> <% }) %>
     </div>
+    <% } %>
+  </div>
+  <div
+    class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
+    <img
+      class="rounded-full object-cover"
+      src="<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>"
+      alt="<%= themeConfig.siteName %>"
+      width="100%"
+      height="100%" />
+  </div>
 </header>
