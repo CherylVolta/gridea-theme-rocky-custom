@@ -1,6 +1,6 @@
 # Gridea Theme Rocky Custom
 
-适用于 Gridea 静态博客程序的网页主题 Rocky 的自用版本。
+适用于 Gridea 静态博客程序的网页主题 Rocky 的自用版本，侵删。
 
 ## 说明
 
