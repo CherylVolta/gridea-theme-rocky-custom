@@ -1,6 +1,6 @@
 # Gridea Theme Rocky Custom
 
-Self-use version of web page theme Rocky for static blogger Gridea.
+Self-use version of web page theme Rocky for static blogger Gridea, intrusion deletion.
 
 [中文说明](README_ZH.md)
 
