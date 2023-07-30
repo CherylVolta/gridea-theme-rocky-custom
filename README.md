@@ -1,4 +1,4 @@
-# Gridea Theme Rocky Custom
+# Gridea Theme Rocky Custom (Version: v109.0.1)
 
 Self-use version of web page theme Rocky for static blogger Gridea, intrusion deletion.
 
@@ -16,7 +16,7 @@ Version number naming rule: **<ORIGINAL_THEME_VERSION_NUMBER>.<THIS_THEME_VERSIO
 2. **Extract with folder** and put it into the **themes** folder under the project folder of Gridea.
 3. Restart Gridea client to switch to this theme (named **Rocky Custom**).
 
-## Changes compared to the original theme (This version: v109.0.1, Original version: v1.0.9)
+## Changes (Original version: v1.0.9)
 
 ### Bugs fixed
 
