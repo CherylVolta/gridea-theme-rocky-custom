@@ -1,4 +1,4 @@
-# Gridea Theme Rocky Custom (Version: v109.0.1)
+# Gridea Theme Rocky Custom (版本: v109.0.1)
 
 适用于 Gridea 静态博客程序的网页主题 Rocky 的自用版本，侵删。
 
@@ -14,7 +14,7 @@
 2. 将源代码带文件夹解压，放入 Gridea 工程目录下的 themes 目录中。
 3. 重启 Gridea 客户端即可切换到本主题（名为 **Rocky Custom** ）。
 
-## 变更（原版本：v1.0.9）
+## 变更（源版本：v1.0.9）
 
 ### Bug 修复
 
