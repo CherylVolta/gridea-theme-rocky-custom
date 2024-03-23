@@ -1,4 +1,4 @@
-# Gridea Theme: Rocky Custom (版本: v109.0.1)
+# Gridea 主题：Rocky 定制版（版本: v109.0.1）
 
 [EN README](README_EN.md)
 
@@ -25,4 +25,4 @@
 
 ## TODO
 
-- [ ] 尝试优化外部 css 、字体的加载速度等，以加快网页加载。
+- [ ] 尝试优化外部 css、字体的加载速度等，以加快网页加载。

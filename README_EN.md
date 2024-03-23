@@ -1,4 +1,4 @@
-# Gridea Theme: Rocky Custom (Version: v109.0.1)
+# Gridea Theme: Rocky Custom Edition (Version: v109.0.1)
 
 ## Description
 
