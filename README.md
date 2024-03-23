@@ -1,37 +1,26 @@
-# Gridea Theme Rocky Custom (Version: v109.0.1)
+# Gridea Theme: Rocky Custom (版本: v109.0.1)
 
-Self-use version of web page theme Rocky for static blogger Gridea, intrusion deletion.
+[EN README](README_EN.md)
 
-[中文说明](README_ZH.md)
+## 说明
 
-## Description
+适用于 [Gridea 静态博客客户端](https://github.com/getgridea/gridea)的博客主题 Rocky，根据自己的喜好做了一些修改。仅供学习交流！
 
-This is a self-use version of web page theme Rocky for static blogger Gridea customized by Waoap, it's only for learning and communicating.
+版本号命名规则为：**<原主题版本号>.<本主题版本号>**
 
-Version number naming rule: **<ORIGINAL_THEME_VERSION_NUMBER>.<THIS_THEME_VERSION_NUMBER>**
+## 使用
 
-## Usage
+1. 从发布页下载[最新发布的源文件](https://github.com/Waoap/gridea-theme-rocky-custom/releases)。
+2. 将源代码带文件夹解压，放入 Gridea 工程目录下的 themes 目录中。
+3. 重启 Gridea 客户端即可切换到本主题（名为 **Rocky Custom** ）。
 
-1. Download [the source code of latest release file](https://github.com/Waoap/gridea-theme-rocky-custom/releases).
-2. **Extract with folder** and put it into the **themes** folder under the project folder of Gridea.
-3. Restart Gridea client to switch to this theme (named **Rocky Custom**).
+## 变更（源版本：v1.0.9）
 
-## Changes (Source-Version: v1.0.9)
-
-### Bugs fixed
-
-1. Fixed the error that the background color of code highlight theme Synthwave84 is wrong in some special situations.
-
-### Function changes
-
-1. Delete some code highlight themes with inappropriate foreground and background colors, now, there are two code highlight themes **Github, Synthwave84 (default)** .
-2. Add and Delete fonts, now, there are two fonts **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite), [Fira Code](https://github.com/tonsky/FiraCode)**. The font file are saved in **[repository](https://github.com/Waoap/waoap.github.io/tree/main/fonts)**, and loading via **[fastly jsDelivr](https://fastly.jsdelivr.net)**.Attention:
-
-    - Web page fonts (Can choose independently) : 霞骛文楷 (Default) [Chinese, English].
-    - Code block fonts: Fira Code [English] + 霞骛文楷 [Chinese].
-
-3. Change the default state of some settings.
+1. 修复代码高亮主题 Synthwave84 在特定情况时的背景颜色错误。
+2. 删除一些前景、背景颜色不适配的代码高亮主题，现有 **Github 、Synthwave84（默认）** 两种高亮主题。
+3. 增删字体，现有 **[霞骛文楷（轻便版）](https://github.com/lxgw/LxgwWenKai-Lite)、[Fira Code](https://github.com/tonsky/FiraCode)** 两种字体。字体文件保存在[仓库](https://github.com/SeagullOddy/seagulloddy.github.io/tree/main/fonts)中，通过 [fastly jsDelivr](https://fastly.jsdelivr.net) 来加载。其中：网页字体（可自主更改）默认为**霞骛文楷[中文，英文]**；代码块字体默认为 **Fira Code [英文] + 霞骛文楷 [中文]**。
+4. 调整一些设置的默认开关状态。
 
 ## TODO
 
-- [ ] Try to optimize the loading speed of external css and fonts, etc., in order to speed up the loading of web page.
+- [ ] 尝试优化外部 css 、字体的加载速度等，以加快网页加载。
