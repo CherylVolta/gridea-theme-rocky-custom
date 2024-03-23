@@ -4,6 +4,8 @@
 
 Applicable to [Gridea static blog client] (<https://github.com/getgridea/gridea>) 's blog theme Rocky, according to your own preferences to make some changes. Only for learning and communication!
 
+For a sample, please see [here](https://seagulloddy.github.io/).
+
 Version number naming rule: **<ORIGINAL_THEME_VERSION_NUMBER>.<THIS_THEME_VERSION_NUMBER>**
 
 ## Usage
