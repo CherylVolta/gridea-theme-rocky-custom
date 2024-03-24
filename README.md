@@ -4,6 +4,8 @@
 
 ## 说明
 
+**转战 Hexo，弃坑ing……**
+
 适用于 [Gridea 静态博客客户端](https://github.com/getgridea/gridea)的博客主题 Rocky，根据自己的喜好做了一些修改。仅供学习交流！
 
 样例见[此处](https://seagulloddy.github.io/)。
