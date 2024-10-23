@@ -18,7 +18,7 @@ Version number naming rule: **<ORIGINAL_THEME_VERSION_NUMBER>.<THIS_THEME_VERSIO
 
 1. Fixed the background color error of the code highlighting theme Synthwave84 in specific cases.
 2. Delete some code highlight themes that do not match the foreground and background colors, and the existing **Github, Synthwave84 (default)** two highlight themes.
-3. Add and delete fonts, the existing **[LxgwWenKai (Lite)](https://github.com/lxgw/LxgwWenKai-Lite), [Fira Code](https://github.com/tonsky/FiraCode)** two fonts. The font file is saved in the [repository](../../../cherylvolta.github.io/tree/main/fonts) and loaded through [fastly jsDelivr](https://fastly.jsdelivr.net). What's more, the web font (which can be changed independently) defaults to **LxgwWenKai [Chinese, English]**, and the code block font defaults to **Fira Code [English] + LxgwWeknKai [Chinese]**.
+3. Add and delete fonts, the existing **[LxgwWenKai (Lite)](https://github.com/lxgw/LxgwWenKai-Lite), [Fira Code](https://github.com/tonsky/FiraCode)** two fonts. The font file is saved in the [repository](../../../lyana-nullptr.github.io/tree/main/fonts) and loaded through [fastly jsDelivr](https://fastly.jsdelivr.net). What's more, the web font (which can be changed independently) defaults to **LxgwWenKai [Chinese, English]**, and the code block font defaults to **Fira Code [English] + LxgwWeknKai [Chinese]**.
 4. Adjust the default switch state of some settings.
 
 ## TODO
